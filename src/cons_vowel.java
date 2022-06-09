@@ -6,6 +6,7 @@ public class cons_vowel {
         char ch='\0';
         Set<Character> vow = null;
         Set<Character> cons =null;
+        Set<Character> sp = new HashSet<Character>();
         System.out.println("Enter the string:");
         Scanner sc =new Scanner(System.in);
         s =sc.nextLine();
@@ -16,6 +17,8 @@ public class cons_vowel {
             ch = s.charAt(i);
             if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
             vow.add(ch);
+            else if(ch==' ')
+            sp.add(ch);
             else
             cons.add(ch);
         }
