@@ -94,7 +94,7 @@ public class calendr {
                     }
             }
         }
-        else if(month>=7&& month%2==0 || month<6 && month%2!=0)
+        else if(month <=12 &&month>=7&& month%2==0 || month<6 && month%2!=0)
         {
             days =31;
             for(int i=0;i<week.length;i++)

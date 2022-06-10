@@ -55,3 +55,46 @@ public class assignmentTwo {
         return m;
         }    
 }
+int Solution::solve(string A) {
+    int n = A.size();
+    int prex[n], sufx[n];
+    for(int i = 0; i < n; i++){
+        if(A[i] == 'x'){
+            prex[i] = i;
+        }
+        else{
+            if(i == 0){
+                prex[i] = -1;
+            }
+            else{
+              prex[i] = prex[i-1];
+            }
+        }
+    }
+    for(int i = n-1; i >= 0; i--){
+        if(A[i] == 'x'){
+            sufx[i] = i;
+        }
+        else{
+            if(i == n-1){
+                sufx[i] = -1;
+            }
+            else{
+                sufx[i] = sufx[i+1];
+            }
+        }
+    }
+    int ans = 0;
+    for(int i = 0; i < n; i++){
+        if(A[i] == 'o'){
+            if(prex[i] != -1)
+                ans = min(ans, i - prex[i]);
+            if(sufx[i] != -1)
+                ans = min(ans, sufx[i] - i);
+        }
+    }
+    if(ans == 0){
+        return -1;
+    }
+    return ans;
+}
