@@ -1,10 +1,14 @@
+import java.util.*;
 public class test1 {
     public static void main(String[] args) {
-        
-    }
+     Scanner sc= new Scanner(System.in);
+    
+     sc.close();
+    }    
+    
     public String firstNonRepeating(String arr){
     int len = arr.length();
-    Map<String, Integer> hmap = new HashMap<>();
+    Map<Character, Integer> hmap = new HashMap<>();
     char ch;
     for(int i=0; i<len; i++){
         ch = arr.charAt(i);
