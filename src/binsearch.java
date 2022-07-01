@@ -8,10 +8,12 @@ public class binsearch {
         System.out.println("Enter the elements in sorted increasing order in the array: ");
         for(int i=0;i<size;i++)
             A[i]=sc.nextInt();
+            //System.out.println(A);
         System.out.println("Enter the element to be found: ");
         int element =sc.nextInt();    
         int res= binarySearch(A, element);
         System.out.println("The index of element is: "+res);
+        //System.out.println(A);
         sc.close();
     }
     public static int binarySearch (int[] A, int element)
