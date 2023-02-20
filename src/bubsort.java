@@ -4,7 +4,7 @@ public class bubsort {
     public static void main(String[] args) {
         int i,k,j,n;
         k=0;
-        try (Scanner sc = new Scanner(System.in)) {
+        Scanner sc = new Scanner(System.in);
             System.out.println("Enter the size of array:");
             n=sc.nextInt();
             int[] a= new int[n];
@@ -28,9 +28,8 @@ public class bubsort {
             System.out.println("The sorted array is:");
             for(i=0;i<n;i++)
             {
-                System.out.println(a[i]+" ");
+                System.out.print(a[i]+" ");
             }
-      sc.close();
-        }
+        sc.close();
     }
 }
